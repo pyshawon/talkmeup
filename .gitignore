@@ -1,0 +1,17 @@
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+# django
+db.sqlite3
+manage.py
+migrations/
+
+# Python
+__pycache__/
+*.pyc
+
+# other
+.editorconfig
