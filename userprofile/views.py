@@ -8,9 +8,11 @@ from rest_framework import generics
 
 
 class UserProfileList(generics.ListCreateAPIView):
-    queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
-    permission_classes = (permissions.IsAdminUser,)
+    permission_classes = (permissions.IsAuthenticated,)
+
+    def get_queryset(self):
+        return UserProfile.objects.filter(owner=self.request.user)
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
