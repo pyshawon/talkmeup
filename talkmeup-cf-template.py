@@ -47,7 +47,7 @@ ud = Base64(Join('\n', [
     "virtualenv talkmeup-env",
     "source talkmeup-env/bin/activate",
     "cd talkmeup",
-    "pip install -r requirements.txt"
+    "pip install -r requirements.txt",
     "python manage.py runserver",
 ]))
 
