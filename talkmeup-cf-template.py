@@ -40,10 +40,10 @@ t.add_resource(ec2.SecurityGroup(
 
 ud = Base64(Join('\n', [
     "#!/bin/bash",
-    "sudo yum install git",
+    "sudo yum -y install git",
     "git clone https://github.com/du6/talkmeup.git",
-    "sudo yum install python35",
-    "sudo yum install python35-setuptools",
+    "sudo yum -y install python35",
+    "sudo yum -y install python35-setuptools",
     "sudo easy_install-3.5 pip",
     "pip3 install --upgrade pip",
     "sudo python3 -m pip install virtualenv",
