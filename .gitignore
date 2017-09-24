@@ -6,7 +6,6 @@
 
 # django
 db.sqlite3
-manage.py
 migrations/
 
 # Python
