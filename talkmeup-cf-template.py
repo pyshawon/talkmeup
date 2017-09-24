@@ -47,6 +47,7 @@ ud = Base64(Join('\n', [
     "virtualenv talkmeup-env",
     "source talkmeup-env/bin/activate",
     "cd talkmeup",
+    "pip install -r requirements.txt"
     "python manage.py runserver",
 ]))
 
@@ -55,6 +56,7 @@ t.add_resource(ec2.Instance(
     ImageId="ami-831c2de3",
     InstanceType="t2.micro",
     SecurityGroups=[Ref("SecurityGroup")],
+    KeyName=Ref("KeyPair"),
     UserData=ud,
 ))
 t.add_output(Output(
