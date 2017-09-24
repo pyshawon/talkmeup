@@ -40,15 +40,19 @@ t.add_resource(ec2.SecurityGroup(
 
 ud = Base64(Join('\n', [
     "#!/bin/bash",
-    "yum install git-core",
+    "sudo yum install git",
     "git clone https://github.com/du6/talkmeup.git",
-    "yum -y install python-pip",
-    "pip install virtualenv",
-    "virtualenv talkmeup-env",
+    "sudo yum install python35",
+    "sudo yum install python35-setuptools",
+    "sudo easy_install-3.5 pip",
+    "pip3 install --upgrade pip",
+    "sudo python3 -m pip install virtualenv",
+    "virtualenv -p python3 talkmeup-env",
     "source talkmeup-env/bin/activate",
     "cd talkmeup",
     "pip install -r requirements.txt",
-    "python manage.py runserver",
+    "python manage.py migrate",
+    "python manage.py runserver 0.0.0.0:" + ApplicationPort,
 ]))
 
 t.add_resource(ec2.Instance(

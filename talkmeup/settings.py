@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'talkmeup-env.pdej7m249m.us-west-1.elasticbeanstalk.com',
     '127.0.0.1',
+    '.us-west-1.compute.amazonaws.com',
 ]
 
 
