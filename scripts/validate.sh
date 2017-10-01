@@ -1,3 +1,3 @@
 #!/bin/sh
 
-curl -I localhost:80
+curl -I localhost:3000
