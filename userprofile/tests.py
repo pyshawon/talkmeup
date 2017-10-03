@@ -34,7 +34,7 @@ class UserProfileTest(TestCase):
 
         request = self.factory.get('/userprofile/')
         response = self.request_detail_as_user(self.jj, request, 1)
-        self.assertEqual(response.status_code, 403)
+        self.assertEqual(response.status_code, 400)
 
     def list_profiles(self, user):
         request = self.factory.get('/userprofile')
