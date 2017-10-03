@@ -9,14 +9,12 @@ node {
     sh 'source talkmeup-env/bin/activate'
 
   stage 'Intall requirements'
-    sh 'cd talkmeup'
-    sh 'pip install -r requirements.txt'
+    sh 'talkmeup-env/bin/pip install -r requirements.txt'
 
   stage 'Run test'
-    sh 'python manage.py test'
+    sh 'talkmeup-env/bin/python talkmeup/manage.py test'
 
   stage 'Cleanup'
     sh 'deactivate'
-    sh 'cd ..'
     sh 'rm talkmeup-env -rf'
 }
