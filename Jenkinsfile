@@ -14,7 +14,7 @@ node {
     sh 'talkmeup-env/bin/pip install -r requirements.txt'
 
   stage 'Run test'
-    sh 'talkmeup-env/bin/python talkmeup/manage.py test'
+    sh 'talkmeup-env/bin/python manage.py test'
 
   stage 'Cleanup'
     sh 'rm talkmeup-env -rf'
