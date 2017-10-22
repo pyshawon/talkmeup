@@ -1,0 +1,25 @@
+{% extends "coach/base.html" %}
+
+{% block content %}
+
+  <hr class="featurette-divider">
+
+  <div class="container marketing">
+    <div class="row">
+      <div>
+        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+      </div>
+      <div>
+        <h2>{{ coach.name }}</h2>
+        <ul>
+          <li><b>Bio</b>: {{ coach.bio_text }}</li>
+          <li><b>Research Area</b>: {{ coach.research_area }}</li>
+        </ul>
+        <p><a class="btn btn-lg btn-primary" href="#" role="button">Make a reservation</a></p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+{% endblock%}
