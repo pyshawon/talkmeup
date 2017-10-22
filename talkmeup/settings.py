@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'guardian',
     'rest_framework',
+    'coach.apps.CoachConfig',
     'userprofile.apps.UserprofileConfig',
 ]
 
@@ -72,6 +73,11 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 
 WSGI_APPLICATION = 'talkmeup.wsgi.application'
