@@ -30,6 +30,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     '.us-west-1.compute.amazonaws.com',
     '54.153.116.23',
+    '.talkmeup.co',
 ]
 
 
