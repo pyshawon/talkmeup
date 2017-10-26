@@ -7,10 +7,13 @@
   <div class="container marketing">
     <div class="row">
       <div>
-        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+        <img class="rounded-circle" src="{{ coach.avatar.url }}" width="140" height="140">
       </div>
       <div>
         <h2>{{ coach.name }}</h2>
+        <p>{{ coach.title }}</p>
+        <p>{{ coach.secondary_affiliation }}</p>
+        <p>{{ coach.affiliation }}</p>
         <ul>
           <li><b>Bio</b>: {{ coach.bio_text }}</li>
           <li><b>Research Area</b>: {{ coach.research_area }}</li>

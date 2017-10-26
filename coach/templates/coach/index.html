@@ -63,14 +63,15 @@
             {% for coach in coach_list %}
 
               <div class="col-lg-4">
-                <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                <img class="rounded-circle" src="{{ coach.avatar.url }}" width="140" height="140">
                 <h2>{{ coach.name }}</h2>
-                <p>{{ coach.bio_text }}</p>
+                <p>{{ coach.title }}</p>
+                <p>{{ coach.affiliation }}</p>
                 <p><a class="btn btn-secondary" href="{% url 'coach:detail' coach.id %}" role="button">View details &raquo;</a></p>
               </div><!-- /.col-lg-4 -->
 
             {% endfor %}
-          {% else %}
+         {% else %}
             <p>No coaches are available.</p>
           {% endif %}
 
