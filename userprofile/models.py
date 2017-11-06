@@ -14,9 +14,3 @@ class UserProfile(models.Model):
 
     class Meta:
         ordering = ('-createdOn',)
-
-@receiver(post_save, sender=User)
-def update_user_profile(sender, instance, created, **kwargs):
-    if created:
-        UserProfile.objects.create(owner=instance)
-    instance.userprofile.save()

@@ -43,9 +43,11 @@ def signup(request):
         if form.is_valid():
             user = form.save(commit=False)
             user.is_active = False
-            user.save()
+            user.save() 
+            UserProfile.objects.create(owner=user)
+            user.userprofile.save()
             current_site = get_current_site(request)
-            subject = 'Activate Your MySite Account'
+            subject = 'Activate Your TalkMeUp Account'
             message = render_to_string('userprofile/account_activation_email.html', {
                 'user': user,
                 'domain': current_site.domain,
@@ -74,6 +76,7 @@ def activate(request, uidb64, token):
         user.is_active = True
         user.userprofile.email_confirmed = True
         user.save()
+        user.userprofile.save()
         login(request, user, backend='django.contrib.auth.backends.ModelBackend')
         return redirect('home')
     else:
