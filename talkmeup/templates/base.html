@@ -11,20 +11,32 @@
 
     <!-- Custom styles for this template -->
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'coach/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
   </head>
   <body>
 
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">TalkMeUp</a>
+        <a class="navbar-brand" href="{% url 'home' %}">TalkMeUp</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
+            {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'userprofile:profile-detail' user.id %}">{{ user.username }}</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+              </li>
+            {% endif %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'coach:index' %}">Softskills<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{% url 'signup' %}">Signup<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'coach:index' %}">Coaches</a>
@@ -45,12 +57,17 @@
 
       <!-- FOOTER -->
       <footer class="container">
-        <p class="float-right"><a href="{% url 'coach:index' %}">Back to top</a></p>
+        <p class="float-right"><a href="#" id="back_to_top_link">Back to top</a></p>
         <p>&copy; 2017 TalkMeUp, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
 
     </main>
 
+    <script type="text/javascript">
+      window.onload = function(){
+        document.getElementById("back_to_top_link").href = document.URL;
+      }
+    </script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

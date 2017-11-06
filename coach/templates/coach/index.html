@@ -1,55 +1,8 @@
-{% extends "coach/base.html" %}
+{% extends "base.html" %}
 
 {% block content %}
 
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
-            <div class="container">
-              <div class="carousel-caption text-left">
-                <h1>Do you want to improve your soft skills?</h1>
-                <p>Presentation, public speech, management, communication...</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Wanna get professional soft skills training?</h1>
-                <p>Get training and advice from from a professional at anywhere.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-            <div class="container">
-              <div class="carousel-caption text-right">
-                <h1>TalkMeUp is the ultimate solution!</h1>
-                <p>Professors from prestigious business schools worldwide help you develop soft skills on 1:1 basis, any time, anywhere.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-
+      <hr class="featurette-divider">
 
       <!-- Marketing messaging and featurettes
       ================================================== -->
@@ -67,59 +20,18 @@
                 <h2>{{ coach.name }}</h2>
                 <p>{{ coach.title }}</p>
                 <p>{{ coach.affiliation }}</p>
-                <p><a class="btn btn-secondary" href="{% url 'coach:detail' coach.id %}" role="button">View details &raquo;</a></p>
+                <p><a class="btn btn-primary" href="{% url 'coach:detail' coach.id %}" role="button">View details &raquo;</a></p>
               </div><!-- /.col-lg-4 -->
 
             {% endfor %}
          {% else %}
             <p>No coaches are available.</p>
-          {% endif %}
+         {% endif %}
 
         </div><!-- /.row -->
 
-
-        <!-- START THE FEATURETTES -->
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Get training from professors at top business schools.<span class="text-muted"></span></h2>
-            <p class="lead">blah blah blah.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Receive training anywhere.<span class="text-muted"></span></h2>
-            <p class="lead">blah blah blah.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Easy to start.<span class="text-muted"></span></h2>
-            <p class="lead">blah blah blah.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <!-- /END THE FEATURETTES -->
-
       </div><!-- /.container -->
+
+      <hr class="featurette-divider">
 
 {% endblock %}

@@ -19,11 +19,19 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
+from userprofile import views as userprofile_views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^$', userprofile_views.home, name='home'),
+    url(r'^', include('django.contrib.auth.urls')),
     url(r'^', include('userprofile.urls')),
     url(r'^coach/', include('coach.urls')),
+    url(r'^signup$', userprofile_views.signup, name='signup'),
+    url(r'^account_activation_sent/$', userprofile_views.account_activation_sent, name='account_activation_sent'),
+    url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
+        userprofile_views.activate, name='activate'),
 ]
 
 if settings.DEBUG is True:

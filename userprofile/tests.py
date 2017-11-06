@@ -10,9 +10,9 @@ class UserProfileTest(TestCase):
     def setUp(self):
         self.factory = APIRequestFactory()
         self.leon = User.objects.create_user(
-            username='leon', email='leon@…', password='top_secret')
+            username='leon', email='leon@...', password='top_secret')
         self.jj = User.objects.create_user(
-            username='jj', email='jj@…', password='top_secret')
+            username='jj', email='jj@...', password='top_secret')
 
     def test_create_profile(self):
         response = self.create_profile(self.leon)
