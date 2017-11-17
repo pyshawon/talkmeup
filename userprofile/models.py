@@ -7,7 +7,6 @@ class UserProfile(models.Model):
     owner = models.OneToOneField(User, on_delete=models.CASCADE)
     displayName = models.CharField(max_length=100, blank=True, default='')
     createdOn = models.DateTimeField(auto_now_add=True)
-    email_confirmed = models.BooleanField(default=False)
 
     def __str__(self):
         return self.displayName
