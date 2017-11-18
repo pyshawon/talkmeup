@@ -1,6 +1,12 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
+h2 {
+    color: #5a5a5a;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 200em;
+}
 
 body {
   padding-top: 3rem;
@@ -8,6 +14,16 @@ body {
   color: #5a5a5a;
 }
 
+img {
+    border-radius: 8px;
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+img:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
