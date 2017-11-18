@@ -1,4 +1,4 @@
-from django.contrib.auth import login
+from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.sites.shortcuts import get_current_site
@@ -41,43 +41,15 @@ def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
-            user = form.save(commit=False)
-            user.is_active = False
-            user.save() 
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            user.save()
             UserProfile.objects.create(owner=user)
             user.userprofile.save()
-            current_site = get_current_site(request)
-            subject = 'Activate Your TalkMeUp Account'
-            message = render_to_string('userprofile/account_activation_email.html', {
-                'user': user,
-                'domain': current_site.domain,
-                'uid': urlsafe_base64_encode(force_bytes(user.pk)),
-                'token': account_activation_token.make_token(user),
-            })
-            user.email_user(subject, message)
-            return redirect('account_activation_sent')
+            login(request, user)
+            return redirect('home')
     else:
         form = SignUpForm()
     return render(request, 'userprofile/signup.html', {'form': form})
-
-
-def account_activation_sent(request):
-    return render(request, 'userprofile/account_activation_sent.html')
-
-
-def activate(request, uidb64, token):
-    try:
-        uid = force_text(urlsafe_base64_decode(uidb64))
-        user = User.objects.get(pk=uid)
-    except (TypeError, ValueError, OverflowError, User.DoesNotExist):
-        user = None
-
-    if user is not None and account_activation_token.check_token(user, token):
-        user.is_active = True
-        user.userprofile.email_confirmed = True
-        user.save()
-        user.userprofile.save()
-        login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-        return redirect('home')
-    else:
-        return render(request, 'userprofile/account_activation_invalid.html')

@@ -121,8 +121,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://django-guardian.readthedocs.io/en/stable/
 AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend', 'guardian.backends.ObjectPermissionBackend')
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
