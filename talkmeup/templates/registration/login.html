@@ -5,7 +5,8 @@
 <hr class="featurette-divider">
 
 <div class="container">
-
+  <div class="row">
+    <div class="col-sm-3">
 {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
@@ -20,7 +21,7 @@
 {% endif %}
 
 <form method="post" action="{% url 'login' %}">
-{% csrf_token %}
+  {% csrf_token %}
 <table>
 <tr>
     <td>{{ form.username.label_tag }}</td>
@@ -31,14 +32,19 @@
     <td>{{ form.password }}</td>
 </tr>
 </table>
-
-<input type="submit" value="login" />
+<p></p>
+<input type="submit" class="btn btn-primary btn-block" value="Login" />
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
 
 {# Assumes you setup the password_reset view in your URLconf #}
 <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
+<p><a class="btn btn-primary btn-block" href="{% url 'social:begin' 'facebook' %}" role="button"><i class="fa fa-facebook-official"></i> Login with Facebook</a></p>
+<p><a class="btn btn-primary btn-block" href="{% url 'social:begin' 'twitter' %}" role="button"><i class="fa fa-twitter-square"></i> Login with Twitter</a></p>                                                                                                                 
+    </div>
+    <div class="col-sm-9"></div>
+  </div>
 </div>
 
 <hr class="featurette-divider">

@@ -4,20 +4,27 @@
   <hr class="featurette-divider">
 
   <div class="container">
-    <h2>Sign up</h2>
-    <form method="post">
-      {% csrf_token %}
-      {% for field in form %}
-        <p>
-          {{ field.label_tag }}<br>
-          {{ field }}
-          {% for error in field.errors %}
-            <p style="color: red">{{ error }}</p>
+    <div class="row">
+      <div class="col-sm-3">
+        <form method="post">
+          {% csrf_token %}
+          {% for field in form %}
+            <p>
+              {{ field.label_tag }}<br>
+              {{ field }}
+              {% for error in field.errors %}
+                <p style="color: red">{{ error }}</p>
+              {% endfor %}
+            </p>
           {% endfor %}
-        </p>
-      {% endfor %}
-      <button type="submit">Sign up</button>
-    </form>
+            <button class="btn btn-primary btn-block" type="submit">Sign up</button>
+        </form>
+        <p></p>
+        <p><a class="btn btn-primary btn-block" href="{% url 'social:begin' 'facebook' %}" role="button"><i class="fa fa-facebook-official"></i> Sign up with Facebook</a></p>
+<p><a class="btn btn-primary btn-block" href="{% url 'social:begin' 'twitter' %}" role="button"><i class="fa fa-twitter-square"></i> Sign up with Twitter</a></p>
+      </div>
+      <div class="col-sm-9"></div>
+    </div>
   </div>
 
   <hr class="featurette-divider">
