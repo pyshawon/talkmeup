@@ -38,6 +38,7 @@ PyYAML==3.12
 requests==2.18.4
 s3transfer==0.1.11
 six==1.10.0
+social-auth-app-django==2.0.0
 troposphere==1.9.5
 urllib3==1.22
 virtualenv==15.1.0
