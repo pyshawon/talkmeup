@@ -20,6 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from userprofile import views as userprofile_views
+from uploads import views as upload_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -29,6 +30,7 @@ urlpatterns = [
     url(r'^', include('userprofile.urls')),
     url(r'^coach/', include('coach.urls')),
     url(r'^signup$', userprofile_views.signup, name='signup'),
+    url(r'^uploads/', include('uploads.urls'))
 ]
 
 if settings.DEBUG is True:

@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'coach.apps.CoachConfig',
     'userprofile.apps.UserprofileConfig',
+    'uploads.apps.UploadsConfig',
 ]
 
 MIDDLEWARE = [
@@ -137,11 +138,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/login'
 
+SOCIAL_AUTH_TWITTER_KEY = 'q4BKPA0Yv9TE6TOjCK6vb2OYt'
+SOCIAL_AUTH_TWITTER_SECRET = 'tRNco24mdjahQBsIaZ096tGoTS4qIOAlcBFj9IT4J8wRHfE6Gu'
+
+SOCIAL_AUTH_FACEBOOK_KEY = '1949089508679497'
+SOCIAL_AUTH_FACEBOOK_SECRET = '042279d311615e7249db2177878e158b'
