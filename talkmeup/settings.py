@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'talkmeup-env.pdej7m249m.us-west-1.elasticbeanstalk.com',
     '127.0.0.1',
+    'localhost',
     '.us-west-1.compute.amazonaws.com',
     '54.153.116.23',
     '.talkmeup.co',
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'guardian',
     'rest_framework',
+    'social_django',
     'coach.apps.CoachConfig',
     'userprofile.apps.UserprofileConfig',
     'uploads.apps.UploadsConfig',
@@ -58,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'talkmeup.urls'
@@ -74,6 +77,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -120,7 +125,12 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Guardian authentication backend
 # https://django-guardian.readthedocs.io/en/stable/
-AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend', 'guardian.backends.ObjectPermissionBackend')
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'guardian.backends.ObjectPermissionBackend',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.facebook.FacebookOAuth2',
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/

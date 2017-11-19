@@ -25,6 +25,7 @@ from uploads import views as upload_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^oauth/', include('social_django.urls', namespace='social')),
     url(r'^$', userprofile_views.home, name='home'),
     url(r'^', include('django.contrib.auth.urls')),
     url(r'^', include('userprofile.urls')),
