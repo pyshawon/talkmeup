@@ -130,6 +130,8 @@ AUTHENTICATION_BACKENDS = (
     'guardian.backends.ObjectPermissionBackend',
     'social_core.backends.twitter.TwitterOAuth',
     'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.linkedin.LinkedinOAuth2',
 )
 
 # Internationalization
@@ -164,3 +166,10 @@ SOCIAL_AUTH_TWITTER_SECRET = 'tRNco24mdjahQBsIaZ096tGoTS4qIOAlcBFj9IT4J8wRHfE6Gu
 
 SOCIAL_AUTH_FACEBOOK_KEY = '1949089508679497'
 SOCIAL_AUTH_FACEBOOK_SECRET = '042279d311615e7249db2177878e158b'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '760440807557-6ajpv0j0d2e6bg3lf28352vccolqlbgo.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'JuMK6hN1EzimsKNVbIixNu3q'
+
+SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '86y1th7d118kgm'
+SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'JWNlg0liuk3mQ7aQ'
+
