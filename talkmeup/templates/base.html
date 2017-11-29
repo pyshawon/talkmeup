@@ -19,20 +19,15 @@
     <!-- W3schools CSS -->
     <!-- TODO: Investigate why this CSS has to be placed at last in order to make the page display normally. -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-</head>
-
+  </head>
   <body>
 
-<!--
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="{% url 'home' %}">TalkMeUp</a>
-          
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-          
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             {% if user.is_authenticated %}
@@ -64,32 +59,17 @@
         </div>
       </nav>
     </header>
--->
 
-
-      
     <main role="main">
 
       {% block content %}
       {% endblock %}
 
-    <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-64">
-      <p><a href="#" class="w3-hover-text-green" style="font-size:12px;">&copy; 2017 TalkMeUp, Inc.</a></p>
-    </footer>
-        
-<!--
-    <div style="position:relative;">
-    <div style="color:#ddd;background-color:#282E34;text-align:justify; text-align: center;">
-       FOOTER 
+      <!-- FOOTER -->
       <footer class="container">
         <p class="float-right"><a href="#" id="back_to_top_link">Back to top</a></p>
-          
         <p>&copy; 2017 TalkMeUp, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
-    </div>
-    </div>
--->
 
     </main>
 
@@ -97,51 +77,6 @@
       window.onload = function(){
         document.getElementById("back_to_top_link").href = document.URL;
       }
-     
-     
-      
-        // POPUP SIGNUP SHEET
-        // ----------------------------------------------
-        var modal = document.getElementById('id01');
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-
-        // TESTIMONIAL SLIDESHOW 
-        // ----------------------------------------------
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-        showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-        showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-        }
-
-
     </script>
 
     <!-- Bootstrap core JavaScript
