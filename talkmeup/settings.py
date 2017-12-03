@@ -132,6 +132,7 @@ AUTHENTICATION_BACKENDS = (
     'social_core.backends.facebook.FacebookOAuth2',
     'social_core.backends.google.GoogleOAuth2',
     'social_core.backends.linkedin.LinkedinOAuth2',
+    'social_core.backends.weibo.WeiboOAuth2',
 )
 
 # Internationalization
@@ -173,3 +174,5 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'JuMK6hN1EzimsKNVbIixNu3q'
 SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '86y1th7d118kgm'
 SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'JWNlg0liuk3mQ7aQ'
 
+SOCIAL_AUTH_WEIBO_KEY = '22021550'
+SOCIAL_AUTH_WEIBO_SECRET = '22a7031fb1815a158a24d0793bf04ba7'
