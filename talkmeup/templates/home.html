@@ -2,13 +2,34 @@
 
 {% block content %}
 
-<!--<div style="text-align: center">-->
-<div class="video-container">
-<!--  <div class="embed-responsive embed-responsive-16by9">-->
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Tiy2LONr050?autoplay=1&loop=1&playlist=Tiy2LONr050&mute=1" height="550" width="970" ></iframe>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      {% load static %}
+      <img src="{% static 'icon/logo-dark.png' %}" class="img-fluid" width="100%" height="auto">
+      </div>
+    <div class="col-sm-2"></div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Tiy2LONr050?autoplay=1&loop=1&playlist=Tiy2LONr050&mute=1"></iframe>
+      </div>
+    </div>
+    <div class="col-sm-3"></div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <h3>On-demand, effective and personalized coaching on communication skills at 1/100th the cost of the world's best professional coaches.</h3>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
 </div>
-<!--  </div>-->
-
 
 <hr class="featurette-divider">
 
@@ -130,15 +151,6 @@
     </div>
 
   </div>
-
-<!--
-    <hr>
-
-    <div>
-      <h2>Impress others with self intro</h2>
-      <p><a class="btn btn-primary" href="#" role="button">Express Interest</a></p>
-    </div>
--->
 
 </div><!-- /.container -->
 
