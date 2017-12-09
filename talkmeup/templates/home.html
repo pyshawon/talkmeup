@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+<section id="header">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2 home_image">
+      {% load static %}
+      <center>
+      <img src="{% static 'icon/logo-dark.png' %}" class="img-responsive" width="80%" height="auto">
+      </center>
+      </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+        <video width="100%" controls >
+    <source src="{% static 'video/promo.mp4' %}" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <h3 style="font-size: 21px; color:#34495c;" class="text-center">On-demand, effective and personalized coaching on communication skills at 1/100th the cost of the world's best professional coaches.</h3>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+<center>
+    <div id="ButtonForScroll">
+      <a href="#why-talkmeup"><span class="scrl"></span></a>
+    </div>
+</center>
+</section>
+</div>
+<div class="container">
+<section id="why-talkmeup">
+        <div class="col-sm-8 col-sm-offset-2">
+          <h1 class="text-center" style="font-size: 5.6rem;font-weight: 700; color: #34495c; margin-top: 100px;">
+             Why TalkMeUp
+          </h1>
+          <br>
+          <br>
+          <center>
+          <div class="col-sm-4">
+            <h2 style="font-size: 2.8rem;font-weight: 700; margin-bottom:25px; color: #34495c">Accessible</h2>
+            <img src="{% static 'icon/accessible.png' %}" class="img-responsive" style="width: 70%;">
+            <br>
+            <br>
+            <br>
+            <p style="font-size: 18px;">TalkMeUp is at your service <span style="color:#EEC15E">24/7</span> </p>
+          </div>
+
+          <div class="col-sm-4">
+            <h2 style="font-size: 2.8rem;font-weight: 700; margin-bottom:25px; color: #34495c">Effective</h2>
+            <img src="{% static 'icon/effective.png' %}" class="img-responsive" style="width: 70%;">
+            <br>
+            <br>
+            <br>
+            <p style="font-size: 18px;"><span style="color:#EEC15E">Personalized </span>coaching that drives progress</p>
+          </div>
+          <div class="col-sm-4">
+            <h2 style="font-size: 2.8rem;font-weight:700; margin-bottom:25px; color: #34495c">Affordable</h2>
+            <img src="{% static 'icon/affordablelight.png' %}" class="img-responsive" style="width: 70%;">
+            <br>
+            <br>
+            <br>
+            <p style="font-size: 18px;">Stating at <span style="color:#EEC15E">$0</span> a month</p>
+          </div>
+    </center>
+
+        </div>
+</section>
+</div>
+<br>
+  <center>
+    <div id="ButtonForScroll">
+      <a href="#presentation-interview">
+        <span class="scrl"></span>
+      </a>
+    </div>
+    </center>
+
+<div class="container">
+<section id="presentation-interview">
+        <div class="col-sm-8 col-sm-offset-2" style="margin-top: 100px">
+          <center>
+          <div class="col-sm-4">
+            <h2 style="font-size: 2.8rem;font-weight: 700; margin-bottom:25px; color: #34495c">Presentation</h2>
+            <img src="{% static 'icon/presentationdark.png' %}" class="img-responsive" style="width: 70%;">
+            <br>
+            <br>
+            <p style="font-size: 15px;">A good presentation is all about your audience.Learn how your content and delivery should satisfy the audience's decision criteria and help you gain their buy-in.</p>
+          </div>
+
+          <div class="col-sm-4">
+            <h2 style="font-size: 2.8rem;font-weight: 700; margin-bottom:25px; color: #34495c">Job Interview</h2>
+            <img src="{% static 'icon/interviewdark.png' %}" class="img-responsive" style="width: 70%;">
+            <br>
+            <br>
+            <p style="font-size: 15px;">Interviewers don't care too much about your stories, but your skills and thought process.More importantly, your personality traits! Learn how you should delivery your value properly.</p>
+          </div>
+          <div class="col-sm-4">
+            <h2 style="font-size: 2.8rem;font-weight:700; margin-bottom:25px; color: #34495c">Leadership</h2>
+            <img src="{% static 'icon/leadership.png' %}" class="img-responsive" style="width: 70%;">
+            <br>
+            <br>
+            <p style="font-size: 15px;">What makes a good leader? Learn How you can be the one that peple want to trust and follow.</p>
+          </div>
+          </center>
+        </div>
+</section>
+</div>
+<br>
+<br>
+<br>
+  <center>
+    <div id="ButtonForScroll">
+      <a href="#talkmeup-about">
+        <span class="scrl"></span>
+      </a>
+    </div>
+    </center>
+
+<div class="container" id="pilot">
+<section id="talkmeup-about">
+        <div class="col-sm-6 col-sm-offset-3" style="margin-top: 100px">
+          <center>
+          <div class="col-sm-6">
+            <h2 style="font-size: 2.8rem;font-weight: 700; margin-bottom:25px; color: #34495c">Employee</h2>
+            <img src="{% static 'icon/employeelight.png' %}" class="img-responsive" style="width: 70%;">
+            <br>
+            <br>
+            <p style="font-size: 15px;">TalkMeUp equips every employee with a smart coach that is always available on his/her mobile device.</p>
+          </div>
+
+          <div class="col-sm-6">
+            <h2 style="font-size: 2.8rem;font-weight: 700; margin-bottom:25px; color: #34495c">Company</h2>
+            <img src="{% static 'icon/company.png' %}" class="img-responsive" style="width: 70%;">
+            <br>
+            <br>
+            <p style="font-size: 15px;">TalkMeUp is easily tailored for enterprises. it provides analytical support to make employee development adaptable, measurable and manageable.Save 90% of training cost while yielding 3X better results.</p>
+          </div>
+          </center>
+        </div>
+</section>
+</div>
+<br>
+<br>
+  <center>
+    <div id="ButtonForScroll">
+      <a href="#testmonial">
+       <span class="scrl"></span>
+      </a>
+    </div>
+    </center>
+
+<section id="testmonial">
+  <div class='row' style="background-color:#ecddb9;margin-right: auto;margin-left: auto;margin-top: 100px;">
+    <br>
+    <br>
+    <div class='col-md-offset-3 col-md-6'>
+      <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#quote-carousel" data-slide-to="1"></li>
+          <li data-target="#quote-carousel" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner" style="font-size: 16px;">
+          <div class="item active">
+              <div class="row">
+                <div class="col-sm-12">
+                  <center>
+                  <p>“We piloted TalkMeUp in my Management Presentations class, improving class participation by 5X. Further, students who used TalkMeUp are maintaining their presentation skills at a higher level after the course when compared with those who relied on less robust forms of feedback."</p>
+                  <small>--Prof. Ron Placone</small>
+                  <p>Faculty Lead for the Accelerate Leadership Center at the Tepper School of Business, Carnegie Mellon University</p>
+                  </center>
+                </div>
+              </div>
+        
+          </div>
+          <div class="item">
+              <div class="row">
+                <div class="col-sm-12">
+                  <center>
+                  <p>"we piloted TalkMeUp in my Management Presentation class, improving class participation rate by 5X. And we see the students who used TalkMeUp maintain their presentation skills at a higher level after the semester,compared with those who didn't."</p>
+                  <small>--Prof. Ron Placone</small>
+                  <p>Faculty Lead for the Accelerate Leadership Center at the Tepper School of Business, Carnegie Mellon University</p>
+                  </center>
+                </div>
+              </div>
+          </div>
+          <div class="item">
+              <div class="row">
+                <div class="col-sm-12">
+                  <center>
+                  <p>"we piloted TalkMeUp in my Management Presentation class, improving class participation rate by 5X. And we see the students who used TalkMeUp maintain their presentation skills at a higher level after the semester,compared with those who didn't."</p>
+                  <small>--Prof. Ron Placone</small>
+                  <p>Faculty Lead for the Accelerate Leadership Center at the Tepper School of Business, Carnegie Mellon University</p>
+                  </center>
+                </div>
+              </div>
+          </div>
+          <br>
+          <br>
+        </div>
+      </div>                          
+    </div>
+    </div>
+</section>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}
