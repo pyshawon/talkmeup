@@ -9,7 +9,11 @@ from django.template.loader import render_to_string
 from rest_framework import permissions
 from rest_framework import generics
 
+<<<<<<< HEAD
 from userprofile.forms import ContactedUserForm, SignUpForm
+=======
+from userprofile.forms import SignUpForm
+>>>>>>> f0cfdcab2a9d074b95c0dd39f7859486b0e90596
 from userprofile.models import UserProfile
 from userprofile.permissions import IsOwner
 from userprofile.serializers import UserProfileSerializer
@@ -53,6 +57,7 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'userprofile/signup.html', {'form': form})
+<<<<<<< HEAD
 
 
 def contact(request):
@@ -61,3 +66,5 @@ def contact(request):
         if form.is_valid():
             form.save()
     return redirect('home')
+=======
+>>>>>>> f0cfdcab2a9d074b95c0dd39f7859486b0e90596

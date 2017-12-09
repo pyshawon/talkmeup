@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -16,9 +17,6 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
 
-    <!-- W3schools CSS -->
-    <!-- TODO: Investigate why this CSS has to be placed at last in order to make the page display normally. -->
-    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
   </head>
   <body id="page-top">
 
@@ -191,6 +189,7 @@
     <script>
 
       window.onload = function(){
+        document.getElementById("back_to_top_link").href = document.URL;
         $('body').scrollspy({target: ".navbar", offset: 50});  
 
         $(window).scroll(function() {

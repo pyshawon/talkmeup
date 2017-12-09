@@ -31,8 +31,12 @@ urlpatterns = [
     url(r'^', include('userprofile.urls')),
     url(r'^coach/', include('coach.urls')),
     url(r'^signup$', userprofile_views.signup, name='signup'),
+<<<<<<< HEAD
     url(r'^uploads/', include('uploads.urls')),
     url(r'^contact/', userprofile_views.contact, name='contact'),
+=======
+    url(r'^uploads/', include('uploads.urls'))
+>>>>>>> f0cfdcab2a9d074b95c0dd39f7859486b0e90596
 ]
 
 if settings.DEBUG is True:

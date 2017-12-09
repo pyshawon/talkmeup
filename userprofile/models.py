@@ -13,6 +13,7 @@ class UserProfile(models.Model):
 
     class Meta:
         ordering = ('-createdOn',)
+<<<<<<< HEAD
 
 
 class ContactedUserProfile(models.Model):
@@ -28,3 +29,5 @@ class ContactedUserProfile(models.Model):
     class Meta:
         ordering = ('-createdOn',)
         
+=======
+>>>>>>> f0cfdcab2a9d074b95c0dd39f7859486b0e90596
