@@ -1,0 +1,185 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  background-color: #F2F3F4;
+  position: relative; 
+}
+
+ #trydemo{ 
+ 	width: 0; 
+ 	height: 0; 
+ 	border-top: 100px solid #EEC153; 
+ 	border-left: 100px solid transparent;
+ 	position: absolute;
+    z-index: 101;
+    top: 0;
+    right: 0;
+
+
+ 	 }
+
+
+
+.nav-color{
+	  background-color: #F2F3F4;
+	  border-bottom: 2px solid #34495c;
+}
+
+#corner-ad {
+  display: block;
+  width: 190px;
+  height: 200px;
+  background: green;
+  position: absolute;
+  top: -107px;
+  right: -98px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  box-shadow: 0px 1px 1px 1px #51373766;
+}
+
+#corner-ad2 {
+  display: none;
+  width: 190px;
+  height: 200px;
+  background: green;
+  position: absolute;
+  top: -107px;
+  right: -98px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  box-shadow: 0px 1px 1px 1px #51373766;
+}
+
+
+
+a:link, a:visited, a:focus, a:active {
+	outline: none;
+}
+
+
+
+/* carousel */
+#quote-carousel 
+{
+  padding: 0 10px 30px 10px;
+  margin-top: 30px;
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  background: none;
+  color: #222;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px;
+}
+
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators 
+{
+  right: 50%;
+  top: auto;
+  bottom: -45px;
+  margin-right: -19px;
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li 
+{
+  background: #EEC153;
+}
+#quote-carousel .carousel-indicators .active 
+{
+  background: #333333;
+}
+#quote-carousel img
+{
+  width: 250px;
+  height: 100px
+}
+/* End carousel */
+
+.item blockquote {
+    border-left: none; 
+    margin: 0;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #quote-carousel 
+    {
+      margin-bottom: 0;
+      padding: 0 40px 30px 40px;
+    }
+}
+
+/* Small devices (tablets, up to 768px) */
+@media (max-width: 768px) { 
+    
+    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+    
+    #quote-carousel .carousel-indicators {
+        bottom: -45px !important;  
+    }
+    #quote-carousel .carousel-indicators li {
+        display: inline-block;
+        margin: 0px 5px;
+        width: 10px;
+        height: 10px;
+    }
+
+    #corner-ad{
+      display: none;
+    }
+    #corner-ad2{
+      display: block;
+    }
+
+}
+
+/* Change the direction of the transition. */
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel-inner > .item.next,
+  .carousel-inner > .item.active.right {
+    left: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  .carousel-inner > .item.prev,
+  .carousel-inner > .item.active.left {
+    left: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+
+.scrl{
+  animation: arrow 4.3s steps(103) infinite;
+  background: url(https://quicksight.aws/_media/images/backgrounds/scroll-indicator-dark_63a68fad8.png) 0 0;
+  display: inline-block;
+  height: 45px;
+  width: 30px;
+}

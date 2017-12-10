@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <hr class="featurette-divider">
+
+  <div class="container marketing">
+    <div class="row">
+      <div>
+        <img class="rounded-circle" src="{{ coach.avatar.url }}" width="140" height="140">
+      </div>
+      <div>
+        <h2>{{ coach.name }}</h2>
+        <p>{{ coach.title }}</p>
+        <p>{{ coach.secondary_affiliation }}</p>
+        <p>{{ coach.affiliation }}</p>
+        <ul>
+          <li><b>Bio</b>: {{ coach.bio_text }}</li>
+          <li><b>Research Area</b>: {{ coach.research_area }}</li>
+        </ul>
+        <p><a class="btn btn-primary" href="#" role="button">Make a reservation</a></p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+{% endblock%}
