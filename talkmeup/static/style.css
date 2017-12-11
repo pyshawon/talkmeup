@@ -80,6 +80,13 @@ a:link, a:visited, a:focus, a:active {
   margin-top: 30px;
 }
 
+.hook{
+  margin-right: 5%;
+  font-size: 20px;
+  color: #EEC153;
+}
+
+
 /* Changes the position of the indicators */
 #quote-carousel .carousel-indicators 
 {
