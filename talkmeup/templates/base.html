@@ -51,6 +51,7 @@
               <a href="{% url 'logout' %}">Logout</a>
             </li>
           {% endif %}
+          <li><a href="#" data-toggle="modal" data-target="#pilot">Schedule a Pilot</a></li>
           <li><a href="#" data-toggle="modal" data-target="#contact">Contact us</a></li>
           <li><a href=""></a></li>
       </ul>
@@ -141,7 +142,7 @@
 
 
 <!-- Schedule a free Pilot for your company! -->
-  <div class="modal fade" id="new" role="dialog" data-keyboard="false" data-backdrop="static">
+  <div class="modal fade" id="pilot" role="dialog" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog modal-md">
       <div class="modal-content">
         <div class="modal-body" style="background-color:#EEC15E;padding: 6%;">
@@ -194,25 +195,25 @@
 
       window.onload = function(){
 
-        $(window).scroll(function() {
-            var start = $("#presentation-interview").offset().top;
-            var stop = $("#talkmeup-about").offset().top;
+        // $(window).scroll(function() {
+        //     var start = $("#presentation-interview").offset().top;
+        //     var stop = $("#talkmeup-about").offset().top;
 
 
-            if ($(window).scrollTop() >= start && $(window).scrollTop() <= stop) {
-                $('#yy').attr('src','{% static 'icon/pilot.png' %}');
-                $('.xx').attr('data-target','#new');
-                $('#ff').attr('src','{% static 'icon/pilot.png' %}');
-                $('.zz').attr('data-target','#new');
+        //     if ($(window).scrollTop() >= start && $(window).scrollTop() <= stop) {
+        //         $('#yy').attr('src','{% static 'icon/pilot.png' %}');
+        //         $('.xx').attr('data-target','#new');
+        //         $('#ff').attr('src','{% static 'icon/pilot.png' %}');
+        //         $('.zz').attr('data-target','#new');
                 
-            }else{
-              $('#yy').attr('src','{% static 'icon/demo.png' %}');
-              $('.xx').attr('data-target','#demo');
-              $('#ff').attr('src','{% static 'icon/demo.png' %}');
-              $('.zz').attr('data-target','#demo');
+        //     }else{
+        //       $('#yy').attr('src','{% static 'icon/demo.png' %}');
+        //       $('.xx').attr('data-target','#demo');
+        //       $('#ff').attr('src','{% static 'icon/demo.png' %}');
+        //       $('.zz').attr('data-target','#demo');
 
-            }
-        });
+        //     }
+        // });
 
 
 
